@@ -49,7 +49,7 @@ export const fetchCompensationData = async (req,res) => {
   const response = await axios.get(process.env.HP_PROGRAM_URL, {
     params,
     headers: {
-      token,
+       Authorization: `Bearer ${token}`,
       "x-api-key": process.env.HP_API_KEY,
     },
   });
