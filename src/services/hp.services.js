@@ -21,6 +21,12 @@ export const fetchHpToken = async (req,res) => {
 
   const { access_token, expires_in } = response.data;
 
+  if(!access_token || !expires_in ) throw new Error("accesstoken and refersh token nhi hai ")
+
+  console.log(access_token,"access token ")
+
+  console.log(expires_in,"dfkfkfkfjkj")
+
   setToken(access_token, expires_in);
 
   return access_token;
@@ -47,6 +53,9 @@ export const fetchCompensationData = async (req,res) => {
     },
   });
 
+  console.log(response,"responce credential ")
+
+  if(!response) throw new Error("token nhi mil paya ")
   return response.data;
 };
 
