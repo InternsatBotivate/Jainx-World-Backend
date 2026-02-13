@@ -1,5 +1,5 @@
 import express from "express";
-import { getPrograms } from "../controllers/hp.controller.js";
+import {getPrograms}  from "../controllers/hp.controller.js";
 
 const router = express.Router();
 
