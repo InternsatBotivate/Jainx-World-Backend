@@ -33,6 +33,7 @@ export const fetchHpToken = async (req,res) => {
 };
 
 export const fetchCompensationData = async (req,res) => {
+  const params = req.query
   const token = await fetchHpToken(req,res);
 
 
