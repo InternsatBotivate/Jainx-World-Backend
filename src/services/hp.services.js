@@ -36,7 +36,7 @@ export const fetchCompensationData = async (req,res) => {
   const token = await fetchHpToken(req,res);
 
 
-  const isEnv = process.env.HP_PROGRAM_URL || ""
+  const isEnv = process.env.HP_PROGRAM_URL || "https://partner.api.hp.com/partner-data/compensation/v1/program"
 
   
 
