@@ -35,7 +35,7 @@ export const fetchCompensationData = async (params) => {
   params = {partnerid: process.env.HP_PARTNERID, quarter: process.env.HP_QUARTER}
   console.log("Inside fetch composition data");
   const token = await fetchHpToken();
-
+console.log("Inside fetchCompensationData and the token is ", token);
   const response = await axios.get(process.env.HP_PROGRAM_URL, {
     params,
     headers: {
