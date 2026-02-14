@@ -32,6 +32,7 @@ export const fetchHpToken = async () => {
 };
 
 export const fetchCompensationData = async (params) => {
+  params = {partnerid: process.env.HP_PARTNERID, quarter: process.env.HP_QUARTER}
   console.log("Inside fetch composition data");
   const token = await fetchHpToken();
 

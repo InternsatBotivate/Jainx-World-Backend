@@ -13,8 +13,6 @@ app.use(express.json());
 app.use("/api/hp", hpRoutes);
 
 app.get("/",(req, res)=>{
-
-console.log(req,"dfjdkfj")
   return res.send("done ")
 })
 
